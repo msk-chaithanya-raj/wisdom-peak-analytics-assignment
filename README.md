@@ -71,15 +71,10 @@ This project includes several features designed to enhance usability and functio
 
 ## 3. State Management
 
-### Option 1: React Context API
+### React Context API
 
 - A context provider is set up to manage global state.
 - Components consume this context for seamless state sharing across the app.
-
-### Option 2: Redux
-
-- A Redux store, actions, and reducers are implemented for efficient state management.
-- Components are connected to the Redux store for accessing and updating state.
 
 ---
 
