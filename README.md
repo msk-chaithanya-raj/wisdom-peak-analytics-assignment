@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# User Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based application for managing and viewing user data fetched from an external API. The project includes a home page to list users with sorting and filtering functionality and a detailed user page.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Project Setup
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Node.js and npm installed on your local machine.
+2. A code editor (e.g., VS Code).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Steps to Run the Project Locally
 
-### `npm test`
+Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone <repository-url>
+cd <repository-directory>
+```
 
-### `npm run build`
+# Features Implemented
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project includes several features designed to enhance usability and functionality for viewing and managing user data. Below is a detailed breakdown of the features implemented:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 1. Home Page
 
-### `npm run eject`
+### User List Display
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Fetches a list of users from the API: `https://jsonplaceholder.typicode.com/users`.
+- Displays key user information:
+  - **Name**
+  - **Email**
+  - **City**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Search Functionality
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- A search bar is provided to filter users by their name dynamically.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Sorting
 
-## Learn More
+- Users can sort the list of users alphabetically:
+  - **A-Z**
+  - **Z-A**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Navigation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Clicking on a user in the list redirects to a detailed page with more user information.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 2. User Detail Page
 
-### Analyzing the Bundle Size
+### Detail Display
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Fetches and displays the following information about the selected user:
+  - Name
+  - Email
+  - Phone number
+  - Company name
+  - Website
 
-### Making a Progressive Web App
+### Navigation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Includes a **"Go Back"** button that redirects the user back to the home page.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 3. State Management
 
-### Deployment
+### Option 1: React Context API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- A context provider is set up to manage global state.
+- Components consume this context for seamless state sharing across the app.
 
-### `npm run build` fails to minify
+### Option 2: Redux
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- A Redux store, actions, and reducers are implemented for efficient state management.
+- Components are connected to the Redux store for accessing and updating state.
+
+---
+
+## 4. Error Handling & Loading States
+
+- Loading indicators are displayed during data fetching.
+- Errors encountered during API calls are handled gracefully, ensuring the app remains user-friendly.
+
+---
+
+## 5. Styling and Design
+
+### CSS Styling
+
+- The application features clean and visually appealing styles.
+- Responsive design ensures a smooth experience on both mobile and desktop devices.
+
+### Tailwind CSS / Material-UI
+
+- **Tailwind CSS**: Configured for utility-first styling.
+- **Material-UI**: Used for pre-built components and consistent theming.
+
+---
+
+## Bonus Features
+
+### Dark/Light Mode Toggle
+
+- A toggle switch allows users to switch between dark and light themes for better accessibility.
+
+### Pagination
+
+- Pagination is implemented for user lists to enhance usability with larger
